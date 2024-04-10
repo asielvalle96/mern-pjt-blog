@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "01bc0cd5-866b-4769-bc01-03cd0eed97ef",
+		"name": "mern_pjt_blog_app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30181178"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"person\",\r\n    \"password\": \"person1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/register"
+					},
+					"response": []
+				},
+				{
+					"name": "profile",
+					"request": {
+						"auth": {
+							"type": "inherit",
+							"inherit": {}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/profile"
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"person\",\r\n    \"password\": \"person1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/login"
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "inherit",
+							"inherit": {}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": "http://localhost:3000/api/logout"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "post",
+			"item": [
+				{
+					"name": "createNewPost",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "How supply chains benefit from using generative AI",
+									"type": "text"
+								},
+								{
+									"key": "summary",
+									"value": "Across the end-to-end supply chain, the buzzworthy technology adds extra capabilities to AI tasks and promises a simplified user experience.",
+									"type": "text"
+								},
+								{
+									"key": "fileToUpload",
+									"type": "file",
+									"src": "C:\\Users\\asiel\\OneDrive\\Pictures\\Capturas de pantalla\\mern_pjt_blog_app\\backend\\Post\\ey-mining-blockchain-concept-ill.jpg"
+								},
+								{
+									"key": "content",
+									"value": "Corporations have been increasingly relying on artificial intelligence (AI) in supply chain for demand planning and procurement, while exploring its use in other areas, such as standardizing processes and optimizing last-mile delivery. Even amid the global pandemic, enterprises were focused on evolving their AI supply chain pilots into operationalization. But, suddenly, another evolution of AI seized the spotlight — generative AI, popularized by ChatGPT — and upended our notions of what’s possible.",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/post/create"
+					},
+					"response": []
+				},
+				{
+					"name": "getAllPosts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/posts"
+					},
+					"response": []
+				},
+				{
+					"name": "getPostInfoById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/post/6566f379190a66270ce5cd2d"
+					},
+					"response": []
+				},
+				{
+					"name": "updatePost",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "How supply chains benefit from using generative AI",
+									"type": "text"
+								},
+								{
+									"key": "summary",
+									"value": "Across the end-to-end supply chain, the buzzworthy technology adds extra capabilities to AI tasks and promises a simplified user experience.",
+									"type": "text"
+								},
+								{
+									"key": "fileToUpload",
+									"type": "file",
+									"src": "C:\\Users\\asiel\\OneDrive\\Pictures\\Capturas de pantalla\\mern_pjt_blog_app\\backend\\Post\\ey-mining-blockchain-concept-ill.jpg"
+								},
+								{
+									"key": "content",
+									"value": "Corporations have been increasingly relying on artificial intelligence (AI) in supply chain for demand planning and procurement, while exploring its use in other areas, such as standardizing processes and optimizing last-mile delivery. Even amid the global pandemic, enterprises were focused on evolving their AI supply chain pilots into operationalization. But, suddenly, another evolution of AI seized the spotlight — generative AI, popularized by ChatGPT — and upended our notions of what’s possible.",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:3000/api/post/update/656883e5c91db0ac9fbf7b58"
+					},
+					"response": []
+				},
+				{
+					"name": "deletePost",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3000/api/post/delete/656700537cf9afcfef2d6b63"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
